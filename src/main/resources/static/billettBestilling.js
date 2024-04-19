@@ -1,7 +1,7 @@
-const billetter = [];
-
-document.getElementById("submitBtn").addEventListener("click", function() {
-    let isValid = true;
+//metode som kjører når "Kjøp Billett" knappen trykkes, Sjekker at input er riktig formert
+//hvis input er riktig så sendes post-request før skjema blankes
+document.getElementById("leggTilBillett").addEventListener("click", function() {
+    let riktigInput = true;
     const film = document.getElementById("filmListe").value;
     const fornavn = document.getElementById("fornavn").value;
     const etternavn = document.getElementById("etternavn").value;
@@ -9,38 +9,38 @@ document.getElementById("submitBtn").addEventListener("click", function() {
     const epost = document.getElementById("epost").value;
     const antall = parseInt(document.getElementById("antall").value, 10);
 
-    // Reset error messages
+    //Resetter feilmeldingene før dem som er false vises igjen
     document.querySelectorAll('.red-text').forEach(el => el.textContent = '');
 
-    // Validation
+    // Validerer inputen, setter riktigInput = fales hvis input er feil
     if (!fornavn.trim()) {
         document.getElementById("fornavnError").textContent = "Fornavn kan ikke være tomt.";
-        isValid = false;
+        riktigInput = false;
     }
     if (!etternavn.trim()) {
         document.getElementById("etternavnError").textContent = "Etternavn kan ikke være tomt.";
-        isValid = false;
+        riktigInput = false;
     }
     if (!/^\d{8}$/.test(telefonnr)) {
         document.getElementById("telefonnrError").textContent = "Telefonnummer må være 8 siffer.";
-        isValid = false;
+        riktigInput = false;
     }
     if (!/\S+@\S+\.\S+/.test(epost)) {
         document.getElementById("epostError").textContent = "Ugyldig epost adresse.";
-        isValid = false;
+        riktigInput = false;
     }
     if (!Number.isInteger(antall) || antall < 1) {
         document.getElementById("antallError").textContent = "Antall må være et heltall større enn 0.";
-        isValid = false;
+        riktigInput = false;
     }
     if (film === "Velg film her") {
         document.getElementById("filmListeError").textContent = "Vennligst velg en film.";
-        isValid = false;
+        riktigInput = false;
     }
 
-    if (!isValid) return;
+    if (!riktigInput) return;
 
-    // Add ticket
+    // Lager de forskjellige attributene inni Billetten
     const billettData ={
         fornavn: fornavn,
         etternavn: etternavn,
@@ -57,6 +57,7 @@ document.getElementById("submitBtn").addEventListener("click", function() {
 
 });
 
+//ajax http delete request som kjøres når "slett alle billettene" knappen trykkes.
 document.getElementById("fjernKnapp").addEventListener("click", function() {
   $.ajax({
       type: "delete",
@@ -66,6 +67,7 @@ document.getElementById("fjernKnapp").addEventListener("click", function() {
   }})
 });
 
+//ajax http delete request som kjøres når "slett nyeste billett" knappen trykkes.
 document.getElementById("fjernNyesteKnapp").addEventListener("click", function (){
     $.ajax({
         type: "delete",
@@ -75,6 +77,7 @@ document.getElementById("fjernNyesteKnapp").addEventListener("click", function (
         }})
 });
 
+// Henter og viser alle billetter fra /hentAlle endepunktet, bestillingsdetaljer utskrives i skjema
 function visBilletter() {
     $.get("/hentAlle", function(data) {
         const tableBody = document.querySelector("#billettTable tbody");

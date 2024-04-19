@@ -48,9 +48,10 @@
             <span id="epostError" class="red-text"></span>
         </div>
     </form>
-    <button class="pt-2" id="submitBtn" type="button">Kjøp Billett</button>
+    <button class="pt-2" id="leggTilBillett" type="button">Kjøp Billett</button>
     <h2 class="m-4">Alle Billetter</h2>
-    <table id="billettTable">
+    <div class="table-responsive">
+    <table id="billettTable" class="table">
         <thead>
         <tr>
             <th>Film</th>
@@ -64,6 +65,7 @@
         <tbody>
         </tbody>
     </table>
+    </div>
     <button id="fjernKnapp" type="button">Slett alle billettene</button>
     <button id="fjernNyesteKnapp" type="button">Slett Nyeste billett</button>
 
