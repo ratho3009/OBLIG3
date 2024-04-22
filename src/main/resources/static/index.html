@@ -9,12 +9,12 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body class="container-fluid">
-    <div id="warningMessage" class="red-text"></div>
+    <div id="feilMelding" class="red-text"></div>
     <h1 class="mt-3">Bestilling av Kinobilletter</h1>
     <form id="billettForm">
         <div class="form-group pt-2">
             <label for="filmListe">Velg film:</label>
-            <select id="filmListe">
+            <select id="filmListe" name="film">
                 <option disabled selected>Velg film her</option>
                 <option>Star Wars</option>
                 <option>Hunger Games</option>
@@ -24,34 +24,34 @@
         </div>
         <div class="form-group pt-2">
             <label for="antall">Antall:</label>
-            <input id="antall" min="1" type="number" value="1">
+            <input id="antall" name="antall" min="1" type="number" value="1">
             <span id="antallError" class="red-text"></span>
         </div>
         <div class="form-group pt-2">
             <label for="fornavn">Fornavn:</label>
-            <input id="fornavn" type="text">
+            <input id="fornavn" name="fornavn" type="text">
             <span id="fornavnError" class="red-text"></span>
         </div>
         <div class="form-group pt-2">
             <label for="etternavn">Etternavn:</label>
-            <input id="etternavn" type="text">
+            <input id="etternavn" name="etternavn" type="text">
             <span id="etternavnError" class="red-text"></span>
         </div>
         <div class="form-group pt-2">
             <label for="telefonnr">Telefonnr:</label>
-            <input id="telefonnr" pattern="\d*" title="Please enter numbers only" type="tel">
+            <input id="telefonnr" name="telefonnr" pattern="\d*" title="Please enter numbers only" type="tel">
             <span id="telefonnrError" class="red-text"></span>
         </div>
         <div class="form-group pt-2">
             <label for="epost">Epost:</label>
-            <input id="epost" type="email">
+            <input id="epost" name="epost" type="email">
             <span id="epostError" class="red-text"></span>
         </div>
     </form>
     <button class="pt-2" id="leggTilBillett" type="button">Kjøp Billett</button>
     <h2 class="m-4">Alle Billetter</h2>
     <div class="table-responsive">
-    <table id="billettTable" class="table">
+    <table id="billettTabell" class="table">
         <thead>
         <tr>
             <th>Film</th>
@@ -68,7 +68,6 @@
     </div>
     <button id="fjernKnapp" type="button">Slett alle billettene</button>
     <button id="fjernNyesteKnapp" type="button">Slett Nyeste billett</button>
-
     <script src="billettBestilling.js"></script> <!-- scripten linkes her for at layoutet skal bli riktig -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

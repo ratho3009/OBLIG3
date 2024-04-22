@@ -80,7 +80,7 @@ document.getElementById("fjernNyesteKnapp").addEventListener("click", function (
 // Henter og viser alle billetter fra /hentAlle endepunktet, bestillingsdetaljer utskrives i skjema
 function visBilletter() {
     $.get("/hentAlle", function(data) {
-        const tableBody = document.querySelector("#billettTable tbody");
+        const tableBody = document.querySelector("#billettTabell tbody");
         tableBody.innerHTML = "";
         data.forEach(({ film, antall, fornavn, etternavn, telefonnr, epost }) => {
             const row = `<tr>

@@ -1,4 +1,4 @@
-/* opprettholder spesifikke høyder og kanter til input feltene */
+/* input feltene */
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -23,11 +23,13 @@ button {
     display: block;
 }
 
+/* gjør antall inputen større */
 #antall {
     width: 40px;
 }
 
 
+/* gir litt mer plass til leggtilKnappen */
 #leggTilBillett{
     margin-top: 20px;
 }
