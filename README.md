@@ -1,5 +1,7 @@
 Oblig 3
 =======
+YOUTUBE VIDEO AV PROGRAMMET: https://youtu.be/MDtE_iPsxlo
+
 OsloMet brukernavn: ratho3009
 
 GitHub brukernavn: ratho3009
