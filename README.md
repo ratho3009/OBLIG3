@@ -1,7 +1,9 @@
 Oblig 3
 =======
 
-YOUTUBE VIDEO AV PROGRAMMET: [https://youtu.be/MDtE_iPsxlo](https://youtu.be/SdsEzrGH6Bk)
+YOUTUBE VIDEO AV PROGRAMMET: https://www.youtube.com/watch?v=SdsEzrGH6Bk
+
+Glemte å trykke på slett Alle billetter knappen på videon, men den fungerer altså!
 
 OsloMet brukernavn: ratho3009
 
