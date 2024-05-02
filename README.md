@@ -1,8 +1,7 @@
 Oblig 3
 =======
 
-NYVIDEO OM 15 min
-YOUTUBE VIDEO AV PROGRAMMET: https://youtu.be/MDtE_iPsxlo
+YOUTUBE VIDEO AV PROGRAMMET: [https://youtu.be/MDtE_iPsxlo](https://youtu.be/SdsEzrGH6Bk)
 
 OsloMet brukernavn: ratho3009
 
