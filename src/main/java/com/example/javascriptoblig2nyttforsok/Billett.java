@@ -2,6 +2,8 @@ package com.example.javascriptoblig2nyttforsok;
 
 public class Billett {
 
+    private long id;
+
     private String film;
 
     private int antall;
@@ -17,13 +19,22 @@ public class Billett {
 
     public Billett(){}
 
-    public Billett(String film, int antall, String fornavn, String etternavn, String telefonnr, String epost) {
+    public Billett(Long id, String film, int antall, String fornavn, String etternavn, String telefonnr, String epost) {
+        this.id = id;
         this.film = film;
         this.antall = antall;
         this.fornavn = fornavn;
         this.etternavn = etternavn;
         this.telefonnr = telefonnr;
         this.epost = epost;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getfilm() {

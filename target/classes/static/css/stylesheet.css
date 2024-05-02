@@ -1,0 +1,35 @@
+/* input feltene */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+select {
+    height: 40px;
+    border: 2px solid #ccc;
+}
+
+/* legger grønnfarge og padding på knappene */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+}
+
+/* Forbedrer stilen til feilmeldinger */
+.invalid-feedback,
+.red-text {
+    color: #dc3545;
+    display: block;
+}
+
+/* gjør antall inputen større */
+#antall {
+    width: 40px;
+}
+
+
+/* gir litt mer plass til leggtilKnappen */
+#leggTilBillett{
+    margin-top: 20px;
+}

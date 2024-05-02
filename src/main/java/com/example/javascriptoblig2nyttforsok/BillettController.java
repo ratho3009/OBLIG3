@@ -26,6 +26,11 @@ public class BillettController {
         return rep.hentAlleBilletter();
     }
 
+    @GetMapping("/oppdater")
+    public void oppdaterBillett(Billett innBillett){
+        rep.oppdaterBillett(innBillett);
+    }
+
     @DeleteMapping("/slettAlle")
     public void slettAlleBilletter() {
        rep.slettAlleBilletter();
